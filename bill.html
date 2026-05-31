@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bill Calculator - DineEasy</title>
+  <!-- External stylesheet shared across all pages -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Site header with logo, name, and tagline -->
+  <header>
+    <div class="logo-area">
+      <img src="images/logo.png" alt="DineEasy logo — a chef hat and cutlery icon" />
+      <div>
+        <h1>DineEasy</h1>
+        <p class="tagline">Discover. Reserve. Enjoy.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main navigation — Bill Calculator is highlighted as the active page -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="restaurants.html">Restaurants</a></li>
+      <li><a href="recommend.html">Get a Recommendation</a></li>
+      <li><a href="reservation.html">Make a Reservation</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="bill.html" class="active">Bill Calculator</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page content -->
+  <main>
+
+    <section>
+      <h2>Estimated Bill Calculator</h2>
+      <p>Select a restaurant and enter your group size to get an estimated total for your meal. The calculator updates automatically as you change your selections.</p>
+    </section>
+
+    <section>
+      <div class="bill-container">
+
+        <!-- Restaurant selector — drives the price range lookup -->
+        <div class="form-group">
+          <label for="bill-restaurant">Select Restaurant</label>
+          <select id="bill-restaurant" name="bill-restaurant">
+            <option value="">-- Choose a restaurant --</option>
+            <option value="Pho Bo Ga Mekong">Pho Bo Ga Mekong (Vietnamese) — $20–$30/person</option>
+            <option value="Sam Sam Chicken">Sam Sam Chicken (Korean) — $15–$25/person</option>
+            <option value="David Hot Pot">David Hot Pot (Chinese) — $25–$40/person</option>
+            <option value="Haidilao Huoguo Emporium">Haidilao Huoguo Emporium (Chinese Hot Pot) — $30–$50/person</option>
+            <option value="Katsuhon">Katsuhon (Japanese) — $20–$35/person</option>
+            <option value="Doo Boo">Doo Boo (Korean) — $18–$28/person</option>
+          </select>
+        </div>
+
+        <!-- Number of diners input -->
+        <div class="form-group">
+          <label for="bill-people">Number of People</label>
+          <input type="number" id="bill-people" name="bill-people" min="1" max="50" placeholder="e.g. 4" />
+        </div>
+
+        <!-- Deposit checkbox — deducts the deposit from the estimated balance -->
+        <div class="form-group">
+          <label class="checkbox-row">
+            <input type="checkbox" id="bill-deposit" name="bill-deposit" />
+            I have already paid the reservation deposit
+          </label>
+        </div>
+
+        <!-- Bill result — hidden until the user fills in restaurant and people -->
+        <div class="bill-result bill-hidden" id="bill-result">
+          <h3>Your Estimated Bill</h3>
+
+          <div class="bill-line">
+            <span>Restaurant</span>
+            <span id="bill-restaurant-name">—</span>
+          </div>
+          <div class="bill-line">
+            <span>Group size</span>
+            <span id="bill-people-count">—</span>
+          </div>
+          <div class="bill-line">
+            <span>Estimated total (range)</span>
+            <span id="bill-est-range">—</span>
+          </div>
+          <div class="bill-line">
+            <span>Deposit paid</span>
+            <span id="bill-deposit-paid">—</span>
+          </div>
+          <div class="bill-line">
+            <span>Estimated balance on the day</span>
+            <span id="bill-balance">—</span>
+          </div>
+
+          <p style="margin-top:12px; font-size:0.85rem; color:var(--grey);">
+            * This is an estimate based on each restaurant's average price range per person.
+              Actual costs will vary depending on what you order.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Page footer -->
+  <footer>
+    <p>&copy; 2026 DineEasy. All rights reserved.</p>
+    <p>Assignment 2 - Web Development | Swinburne University</p>
+  </footer>
+
+  <!-- Shared JS file — bill calculator logic is in calculateBill() -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>

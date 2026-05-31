@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Recommendation - DineEasy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header>
+    <div class="logo-area">
+      <img src="images/logo.png" alt="DineEasy logo — a chef hat and cutlery icon" />
+      <div>
+        <h1>DineEasy</h1>
+        <p class="tagline">Discover. Reserve. Enjoy.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="restaurants.html">Restaurants</a></li>
+      <li><a href="recommend.html" class="active">Get a Recommendation</a></li>
+      <li><a href="reservation.html">Make a Reservation</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="bill.html">Bill Calculator</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main>
+
+    <section>
+      <h2>Find the Perfect Restaurant</h2>
+      <p>Tell us your preferences below and we'll recommend restaurants that suit you best.</p>
+    </section>
+
+    <!-- Recommendation Form -->
+    <section>
+      <div class="form-container">
+        <h2>Your Preferences</h2>
+
+        <form id="recommend-form">
+
+          <!-- Dietary Preference -->
+          <div class="form-group">
+            <label for="dietary">Dietary Preference</label>
+            <select id="dietary" name="dietary">
+              <option value="none">No Preference</option>
+              <option value="vegan">Vegan</option>
+              <option value="halal">Halal</option>
+            </select>
+          </div>
+
+          <!-- Budget Range -->
+          <div class="form-group">
+            <label for="budget">Budget Range (per person)</label>
+            <select id="budget" name="budget">
+              <option value="low">Low ($15-$25)</option>
+              <option value="mid">Mid ($25-$40)</option>
+              <option value="high">High ($40+)</option>
+            </select>
+          </div>
+
+          <!-- Dining Purpose -->
+          <div class="form-group">
+            <label for="purpose">Dining Purpose</label>
+            <select id="purpose" name="purpose">
+              <option value="casual">Casual</option>
+              <option value="family">Family Dinner</option>
+              <option value="date">Date Night</option>
+              <option value="business">Business Lunch</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-submit">Find Restaurants</button>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- Recommendation Results (hidden until JS shows them) -->
+    <section id="recommend-results-section" class="hidden">
+      <div class="recommend-result">
+        <h3>Recommended Restaurants for You</h3>
+        <p>Click "Reserve This" to go to the reservation page with this restaurant pre-selected.</p>
+        <!-- JS will insert result cards here -->
+        <div id="recommend-results"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <p>&copy; 2026 DineEasy. All rights reserved.</p>
+    <p>Assignment 2 - Web Development | Swinburne University</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

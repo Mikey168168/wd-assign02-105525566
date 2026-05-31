@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - DineEasy</title>
+  <!-- External stylesheet shared across all pages -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Site header with logo, name, and tagline -->
+  <header>
+    <div class="logo-area">
+      <img src="images/logo.png" alt="DineEasy logo — a chef hat and cutlery icon" />
+      <div>
+        <h1>DineEasy</h1>
+        <p class="tagline">Discover. Reserve. Enjoy.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main navigation — Register is highlighted as the active page -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="restaurants.html">Restaurants</a></li>
+      <li><a href="recommend.html">Get a Recommendation</a></li>
+      <li><a href="reservation.html">Make a Reservation</a></li>
+      <li><a href="register.html" class="active">Register</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page content -->
+  <main>
+
+    <section>
+      <h2>Create Your Account</h2>
+      <p>Register to manage your reservations and get personalised recommendations.</p>
+    </section>
+
+    <section>
+      <div class="form-container">
+        <h2>Register</h2>
+
+        <!-- Registration form — JS validates all fields before submission -->
+        <form id="register-form" method="post" action="#">
+
+          <!-- Username field -->
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="e.g. john_doe123" />
+            <span class="error-msg" id="username-error"></span>
+          </div>
+
+          <!-- Email address field -->
+          <div class="form-group">
+            <label for="reg-email">Email Address</label>
+            <input type="email" id="reg-email" name="email" placeholder="e.g. john@email.com" />
+            <span class="error-msg" id="reg-email-error"></span>
+          </div>
+
+          <!-- Phone number field -->
+          <div class="form-group">
+            <label for="reg-phone">Phone Number</label>
+            <input type="text" id="reg-phone" name="phone" placeholder="Digits only, 8–15 digits" />
+            <span class="error-msg" id="reg-phone-error"></span>
+          </div>
+
+          <!-- Password field -->
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="At least 10 characters" />
+            <span class="error-msg" id="password-error"></span>
+          </div>
+
+          <!-- Confirm password field -->
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" />
+            <span class="error-msg" id="confirm-password-error"></span>
+          </div>
+
+          <!-- Gender radio buttons — JS checks at least one is selected -->
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-row">
+              <label><input type="radio" name="gender" value="male" /> Male</label>
+              <label><input type="radio" name="gender" value="female" /> Female</label>
+              <label><input type="radio" name="gender" value="other" /> Other</label>
+              <label><input type="radio" name="gender" value="prefer-not" /> Prefer not to say</label>
+            </div>
+            <!-- Anchor span for the gender error message -->
+            <span class="error-msg" id="gender-anchor-error"></span>
+          </div>
+
+          <!-- Dietary preferences checkboxes (optional, not validated) -->
+          <div class="form-group">
+            <label>Dietary Preferences</label>
+            <div class="checkbox-row">
+              <label><input type="checkbox" name="dietary" value="vegan" /> Vegan</label>
+              <label><input type="checkbox" name="dietary" value="halal" /> Halal</label>
+              <label><input type="checkbox" name="dietary" value="gluten-free" /> Gluten-Free</label>
+              <label><input type="checkbox" name="dietary" value="none" /> None</label>
+            </div>
+          </div>
+
+          <!-- Country dropdown — must not be left on the default empty option -->
+          <div class="form-group">
+            <label for="country">Country / Region</label>
+            <select id="country" name="country">
+              <option value="">-- Select your country --</option>
+              <option value="AU">Australia</option>
+              <option value="VN">Vietnam</option>
+              <option value="CN">China</option>
+              <option value="KR">South Korea</option>
+              <option value="JP">Japan</option>
+              <option value="US">United States</option>
+              <option value="GB">United Kingdom</option>
+              <option value="OTHER">Other</option>
+            </select>
+            <span class="error-msg" id="country-error"></span>
+          </div>
+
+          <button type="submit" class="btn-submit">Create Account</button>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Page footer -->
+  <footer>
+    <p>&copy; 2026 DineEasy. All rights reserved.</p>
+    <p>Assignment 2 - Web Development | Swinburne University</p>
+  </footer>
+
+  <!-- Shared JS file for validation and interactivity -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>

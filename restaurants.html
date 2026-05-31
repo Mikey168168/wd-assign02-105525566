@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurants - DineEasy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo-area">
+      <img src="images/logo.png" alt="DineEasy logo — a chef hat and cutlery icon" />
+      <div>
+        <h1>DineEasy</h1>
+        <p class="tagline">Discover. Reserve. Enjoy.</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="restaurants.html" class="active">Restaurants</a></li>
+      <li><a href="recommend.html">Get a Recommendation</a></li>
+      <li><a href="reservation.html">Make a Reservation</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="bill.html">Bill Calculator</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section>
+      <h2>Our Partner Restaurants</h2>
+      <p>Browse all 6 restaurants on our platform. Click "Reserve Now" to go to the reservation page.</p>
+    </section>
+
+    <section>
+      <div class="restaurant-grid">
+
+        <!-- Restaurant 1: Pho Bo Ga Mekong -->
+        <div class="restaurant-card">
+          <img src="images/restaurant1.jpg" alt="A bowl of beef pho at Pho Bo Ga Mekong" />
+          <div class="card-body">
+            <h3>Pho Bo Ga Mekong</h3>
+            <span class="cuisine-tag">Vietnamese</span>
+            <p>Pho Bo Ga Mekong brings the soul of Vietnam's Mekong Delta to your table. Our signature Special Beef Pho is slow-simmered for 12 hours with aromatic spices, delivering a rich, deeply flavourful broth. From fresh rice paper rolls to fragrant lemongrass dishes, every meal celebrates authentic Vietnamese home cooking. Perfect for families seeking a warm, casual dining experience.</p>
+            <p><strong>Signature Dish:</strong> Must Try Special Beef Pho - $22</p>
+            <div class="price-row">
+              <span>$20-$30 per person</span>
+              <span>Deposit: $15</span>
+            </div>
+            <a href="reservation.html?restaurant=Pho+Bo+Ga+Mekong" class="btn-reserve">Reserve Now</a>
+          </div>
+        </div>
+
+        <!-- Restaurant 2: Sam Sam Chicken -->
+        <div class="restaurant-card">
+          <img src="images/restaurant2.jpg" alt="Crispy Korean fried chicken at Sam Sam Chicken" />
+          <div class="card-body">
+            <h3>Sam Sam Chicken</h3>
+            <span class="cuisine-tag">Korean</span>
+            <p>Sam Sam Chicken is your go-to spot for Korean-style fried chicken done right. Double-fried for the ultimate crunch and tossed in your choice of sauces from sweet soy garlic to fiery gochujang, every bite is bold and satisfying. Pair it with cold Korean beer or soju for the full experience. Casual, lively, and always delicious.</p>
+            <p><strong>Signature Dish:</strong> Crispy Double-Fried Chicken - $18</p>
+            <div class="price-row">
+              <span>$15-$25 per person</span>
+              <span>Deposit: $10</span>
+            </div>
+            <a href="reservation.html?restaurant=Sam+Sam+Chicken" class="btn-reserve">Reserve Now</a>
+          </div>
+        </div>
+
+        <!-- Restaurant 3: David Hot Pot -->
+        <div class="restaurant-card">
+          <img src="images/restaurant3.jpg" alt="Bubbling hot pot at David Hot Pot" />
+          <div class="card-body">
+            <h3>David Hot Pot</h3>
+            <span class="cuisine-tag">Chinese</span>
+            <p>David Hot Pot offers an immersive Chinese hot pot experience where you cook your own meal at the table. Choose from our signature Sichuan spicy broth or a mild herbal stock, then fill your pot with premium meats, fresh vegetables, and handmade dumplings. Great for groups and social dining, David Hot Pot guarantees a fun and flavour-packed meal every time.</p>
+            <p><strong>Signature Dish:</strong> Sichuan Spicy Broth Hot Pot - $25</p>
+            <div class="price-row">
+              <span>$25-$40 per person</span>
+              <span>Deposit: $20</span>
+            </div>
+            <a href="reservation.html?restaurant=David+Hot+Pot" class="btn-reserve">Reserve Now</a>
+          </div>
+        </div>
+
+        <!-- Restaurant 4: Haidilao Huoguo Emporium -->
+        <div class="restaurant-card">
+          <img src="images/restaurant4.jpg" alt="Premium hot pot spread at Haidilao Huoguo Emporium" />
+          <div class="card-body">
+            <h3>Haidilao Huoguo Emporium</h3>
+            <span class="cuisine-tag">Chinese Hot Pot</span>
+            <p>Haidilao Huoguo Emporium is a premium hot pot dining destination famous for its exceptional service and high-quality ingredients. Guests enjoy a wide selection of fresh meats, seafood, and vegetables cooked in your choice of richly flavoured broths. Known for its friendly table-side service and complimentary snacks while you wait, Haidilao delivers a truly memorable dining experience for families and groups.</p>
+            <p><strong>Signature Dish:</strong> Premium Wagyu Beef Hot Pot Set - $35</p>
+            <div class="price-row">
+              <span>$30-$50 per person</span>
+              <span>Deposit: $20</span>
+            </div>
+            <a href="reservation.html?restaurant=Haidilao+Huoguo+Emporium" class="btn-reserve">Reserve Now</a>
+          </div>
+        </div>
+
+        <!-- Restaurant 5: Katsuhon -->
+        <div class="restaurant-card">
+          <img src="images/restaurant5.jpg" alt="Wagyu katsu sandwich at Katsuhon" />
+          <div class="card-body">
+            <h3>Katsuhon</h3>
+            <span class="cuisine-tag">Japanese</span>
+            <p>Katsuhon is a refined Japanese katsu restaurant elevating the humble crumbed cutlet to an art form. From our crowd-favourite Wagyu Katsu Sandwich to classic Tonkatsu sets with miso soup and rice, every dish is prepared with precision and quality ingredients. The minimalist interior and attentive service make Katsuhon ideal for date nights and business lunches.</p>
+            <p><strong>Signature Dish:</strong> Premium Wagyu Katsu Sandwich - $28</p>
+            <div class="price-row">
+              <span>$20-$35 per person</span>
+              <span>Deposit: $15</span>
+            </div>
+            <a href="reservation.html?restaurant=Katsuhon" class="btn-reserve">Reserve Now</a>
+          </div>
+        </div>
+
+        <!-- Restaurant 6: Doo Boo -->
+        <div class="restaurant-card">
+          <img src="images/restaurant6.jpg" alt="Soft tofu jjigae at Doo Boo Korean restaurant" />
+          <div class="card-body">
+            <h3>Doo Boo</h3>
+            <span class="cuisine-tag">Korean</span>
+            <p>Doo Boo, meaning "tofu" in Korean, is a cosy restaurant dedicated to the art of Korean tofu cuisine. Our signature Soft Tofu Jjigae arrives bubbling hot, packed with silken tofu, vegetables, and your choice of protein in a rich spicy broth. Alongside hearty bibimbap and kimchi pancakes, Doo Boo offers wholesome, flavourful Korean home cooking in a welcoming setting.</p>
+            <p><strong>Signature Dish:</strong> Soft Tofu Jjigae (Sundubu) - $19</p>
+            <div class="price-row">
+              <span>$18-$28 per person</span>
+              <span>Deposit: $10</span>
+            </div>
+            <a href="reservation.html?restaurant=Doo+Boo" class="btn-reserve">Reserve Now</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 DineEasy. All rights reserved.</p>
+    <p>Assignment 2 - Web Development | Swinburne University</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
